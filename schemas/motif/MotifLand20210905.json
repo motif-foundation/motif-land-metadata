@@ -1,7 +1,7 @@
 {
-    "description": "This schema describes version 20210905 of the Motif Space Metadata Standard",
-    "title": "MotifSpace20210905",
-    "$id": "https://motif.foundation/schemas/MotifSpaceMetadata.json",
+    "description": "This schema describes version 20210905 of the Motif Land Metadata Standard",
+    "title": "MotifLand20210905",
+    "$id": "https://motif.foundation/schemas/MotifLandMetadata.json",
     "type": "object",
     "properties": {
         "assetType": {
@@ -11,64 +11,64 @@
             ],
             "type": "string"
         },
-        "spaceType": {
-            "description": "Type of the NFT Space",
-            "examples": [
-                "Art Gallery"
-            ],
-            "type": "string"
-        },
         "blockchain": {
-            "description": "Blockchain of the NFT space under the space type",
+            "description": "Blockchain of the NFT land under the land type",
             "examples": [
                 "Motif"
             ],
             "type": "string"
         },
         "name": {
-            "description": "Name of the NFT Space",
+            "description": "Name of the NFT Land",
             "examples": [
-                "My Art Gallery"
+                "Land parcel 12,56"
             ],
             "type": "string"
         },
         "description": {
-            "description": "Description of the NFT Space",
+            "description": "Description of the NFT Land",
             "examples": [
-                "My art gallery has all the works I have created."
+                "Land description"
+            ],
+            "type": "string"
+        }, 
+        "city": {
+            "description": "City of the NFT Land",
+            "examples": [
+                "Motif city"
+            ],
+            "type": "string"
+        }, 
+        "landData": {
+            "description": "Data specific to the land in json string",
+            "examples": [
+                ""
             ],
             "type": "string"
         }, 
         "mimeType": {
-            "description": "MimeType of NFT Space Poster",
+            "description": "MimeType of NFT Land Poster",
             "examples": [
                 "image/png"
             ],
             "type": "string"
-        },  
-        "code": {
-            "description": "Code of the space",
-            "examples": [
-                "<html/>"
-            ],
-            "type": "string"
-        },    
+        },     
         "version": {
             "description": "Version of the schema ",
             "examples": [
-                "motif-MotifSpace20210905"
+                "motif-MotifLand20210905"
             ],
             "type": "string"
         }
     },
     "additionalProperties": false,
     "required": [
-        "spaceType",
+    	  "assetType",
         "blockchain",
         "name",
         "description",
-        "mimeType",
-        "code",
+        "city", 
+        "mimeType", 
         "version"
     ]
 }
